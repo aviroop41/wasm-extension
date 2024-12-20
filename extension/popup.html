@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WASM WebSocket Extension</title>
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'wasm-unsafe-eval' 'unsafe-eval'; worker-src blob:">
+    <script src="pyodide/pyodide.js"></script>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <h1>WASM WS</h1>
+    <button id="runWASM">Run Pyodide Code</button>
+    <div id="output" data-placeholder="Press 'Run Pyodide Code' to see results"></div>
+
+    <script src="popup.js"></script>
+</body>
+</html>

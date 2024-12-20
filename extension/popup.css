@@ -1,0 +1,82 @@
+body {
+    background: linear-gradient(45deg, #1a1a2e, #16213e);
+    color: #ffffff;
+    font-family: 'Manrope', sans-serif;
+    padding: 20px;
+    min-width: 300px;
+    min-height: 200px;
+}
+
+h1 {
+    color: #ffffff;
+    text-align: center;
+    font-size: 32px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+button {
+    background: rgba(155, 77, 230, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+    font-weight: bold;
+    transition: all 0.3s;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 
+        0 4px 20px rgba(138, 43, 226, 0.2),
+        inset 0 0 20px rgba(255, 255, 255, 0.1);
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background: rgba(155, 77, 230, 0.3);
+    box-shadow: 
+        0 4px 25px rgba(138, 43, 226, 0.3),
+        inset 0 0 25px rgba(255, 255, 255, 0.15);
+    transform: translateY(-1px);
+}
+
+button:active {
+    transform: translateY(1px);
+    background: rgba(155, 77, 230, 0.4);
+    box-shadow: 
+        0 2px 15px rgba(138, 43, 226, 0.2),
+        inset 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+#output {
+    background: rgba(26, 26, 46, 0.5);
+    border: 1px solid #8a2be2;
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 20px;
+    min-height: 100px;
+    box-shadow: 0 0 10px rgba(138, 43, 226, 0.2);
+    font-family: 'Consolas', monospace;
+    font-size: 14px;
+    line-height: 1.5;
+    white-space: pre-wrap;
+    word-break: break-word;
+    color: #ffffff;
+}
+
+#output:empty::before {
+    content: attr(data-placeholder);
+    color: #999;
+    font-style: italic;
+}
+
+.success {
+    color: #4CAF50;
+}
+
+.error {
+    color: #f44336;
+} 

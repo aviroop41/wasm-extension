@@ -1,0 +1,4 @@
+wsenv
+node_modules
+package-lock.json
+extension/pyodide
