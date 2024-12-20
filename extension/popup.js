@@ -30,7 +30,7 @@ def calculate_fibonacci(n):
     return fib[n-1]
 
 result = calculate_fibonacci(10)
-result
+f"The 10th Fibonacci number is: {result}"
   `;
 
   const result = await pyodide.runPythonAsync(pythonCode);
