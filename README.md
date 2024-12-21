@@ -2,9 +2,10 @@
 
 This extension allows you to run Python code in your browser using Pyodide.
 
-![image](https://github.com/user-attachments/assets/1620a9ce-4c56-4d0f-86d8-3fc7e2c4dd1a)
+![image](https://github.com/user-attachments/assets/7fbe7fe9-a358-4a9e-a6a6-8bc6446880c7)
 
- ![image](https://github.com/user-attachments/assets/1670c218-7449-41c6-ae45-d4fbb79dee63)  ![image](https://github.com/user-attachments/assets/7341acda-93ce-4e66-852b-e5057b332251)
+ ![image](https://github.com/user-attachments/assets/4d781cae-2d74-47a3-a285-467e369c51ca)  ![image](https://github.com/user-attachments/assets/37e1001e-b3d0-414e-82c9-6d02b994b6ee)
+
 
 
 
