@@ -15,8 +15,13 @@ async function initPyodide() {
 // Run Python code using Pyodide
 async function runPythonCode() {
   const pyodide = await initPyodide();
+  const position = document.getElementById('fibInput').value;
+  
+  if (!position || position < 1) {
+    document.getElementById('output').textContent = "Please enter a valid positive number";
+    return;
+  }
 
-  // Updated Python code with WebSocket test
   const pythonCode = `
 def calculate_fibonacci(n):
     if n <= 0:
@@ -29,8 +34,8 @@ def calculate_fibonacci(n):
         fib.append(fib[i-1] + fib[i-2])
     return fib[n-1]
 
-result = calculate_fibonacci(10)
-f"The 10th Fibonacci number is: {result}"
+result = calculate_fibonacci(${position})
+f"The {${position}}th Fibonacci number is: {result}"
   `;
 
   const result = await pyodide.runPythonAsync(pythonCode);
