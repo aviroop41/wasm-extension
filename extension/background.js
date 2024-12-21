@@ -1,8 +1,10 @@
+import { CONFIG } from './config.js';
+
 let socket = null;
 
 chrome.runtime.onInstalled.addListener(() => {
     // Establish WebSocket connection
-    socket = new WebSocket('wss://wasm-extension-ws-server.onrender.com');
+    socket = new WebSocket(CONFIG.WEBSOCKET_URL);
     
     socket.onopen = () => {
         console.log('WebSocket connection established');

@@ -26,7 +26,11 @@ This extension allows you to run Python code in your browser using Pyodide.
    cd ws_server   ```
 3. Install dependencies:   ```
    npm install   ```
-4. Start the development server:   ```
+4. Update the WebSocket URL in `extension/config.js` for local development:   ```
+   export const CONFIG = {
+       WEBSOCKET_URL: 'ws://localhost:8069'
+   };    ```
+5. Start the development server:   ```
    node server.js   ```
 
 ### 3. Installing the Chrome Extension
