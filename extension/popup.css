@@ -7,9 +7,20 @@ body {
     min-height: 200px;
 }
 
+img {
+    width: 40px;
+    height: 40px;
+    display: block;
+    margin: 0 auto 10px;
+}
+
 h1 {
-    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
     text-align: center;
+    color: #ffffff;
     font-size: 32px;
     font-family: 'Consolas', monospace;
     text-transform: uppercase;
