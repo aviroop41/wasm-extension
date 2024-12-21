@@ -35,18 +35,19 @@ f"The 10th Fibonacci number is: {result}"
 
   const result = await pyodide.runPythonAsync(pythonCode);
   
-  // Create WebSocket connection
-  const ws = new WebSocket('ws://localhost:8069');
+  // Connect to the background script
+  const port = chrome.runtime.connect();
   
-  ws.onopen = () => {
-    // Send the Python result to the server
-    ws.send(`Python/WASM Result: ${result}`);
-  };
-
-  ws.onmessage = (event) => {
-    console.log('Received from server:', event.data);
-    document.getElementById('output').textContent = event.data;
-  };
+  // Send the result to the background script
+  port.postMessage({
+    type: 'sendMessage',
+    data: `Python/WASM Result: ${result}`
+  });
+  
+  // Listen for responses
+  port.onMessage.addListener((response) => {
+    document.getElementById('output').textContent = response;
+  });
 }
 
 // Update to trigger on button click instead of automatic execution
