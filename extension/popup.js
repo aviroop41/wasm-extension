@@ -56,4 +56,6 @@ f"The {${position}}th Fibonacci number is: {result}"
 }
 
 // Update to trigger on button click instead of automatic execution
-document.getElementById('runWASM').addEventListener('click', runPythonCode);
+document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('runWASM').addEventListener('click', runPythonCode);
+});
